@@ -30,16 +30,17 @@ axis off
 hold on
 
 load_system('Equivalente_monofasicoControlCorriente');
-find_system;
-
+find_system
+%open_system('Equivalente_monofasicoControlCorriente');
 %get_param('Equivalente_monofasicoControlCorriente/DC Voltage Source1','DialogParameters')
 set_param([gcs,'/DC Voltage Source1'],'Amplitude','400');
 set_param([gcs,'/Series RLC Branch4'],'Inductance','0.005');
 set_param([gcs,'/Series RLC Branch5'],'Inductance','0.002');
 set_param([gcs,'/Series RLC Branch6'],'Capacitance','0.000002');
 set_param([gcs,'/breaker_load'],'Value','0');
-%set_param(gcs,'SimulationCommand','Start');
-
+set_param(gcs,'SimulationCommand','Start');
+disp('\\\\\\\\\\\\\LISTO//////////////')
+disp('\\\\PUEDES EMPEZAR A SIMULAR////')
 % Choose default command line output for Interfaz_GUI
 handles.output = hObject;
 
