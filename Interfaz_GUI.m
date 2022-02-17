@@ -34,9 +34,9 @@ find_system
 %open_system('Equivalente_monofasicoControlCorriente');
 %get_param('Equivalente_monofasicoControlCorriente/DC Voltage Source1','DialogParameters')
 set_param([gcs,'/DC Voltage Source1'],'Amplitude','400');
-set_param([gcs,'/Series RLC Branch4'],'Inductance','0.005');
-set_param([gcs,'/Series RLC Branch5'],'Inductance','0.002');
-set_param([gcs,'/Series RLC Branch6'],'Capacitance','0.000002');
+set_param([gcs,'/Series RLC Branch4'],'Inductance','0.006');
+set_param([gcs,'/Series RLC Branch5'],'Inductance','0.00015');
+set_param([gcs,'/Series RLC Branch6'],'Capacitance','0.000007');
 set_param([gcs,'/breaker_load'],'Value','0');
 set_param(gcs,'SimulationCommand','Start');
 disp('\\\\\\\\\\\\\LISTO//////////////')
@@ -151,3 +151,8 @@ function axes1_CreateFcn(hObject, eventdata, handles)
 % --- Executes on button press in pushbutton6.
 function pushbutton6_Callback(hObject, eventdata, handles)
 open_system('TrifasicoControl')
+
+
+% --- Executes on button press in pushbutton8.
+function pushbutton8_Callback(hObject, eventdata, handles)
+open_system('Equivalente_monofasicoControl110')
